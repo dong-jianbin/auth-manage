@@ -1,18 +1,12 @@
-# mall-tiny
-
-<p>
-<a href="#公众号"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-macrozheng-blue.svg" alt="公众号"></a>
-<a href="https://github.com/macrozheng/mall"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%90%8E%E5%8F%B0%E9%A1%B9%E7%9B%AE-mall-blue.svg" alt="后台项目"></a>
-<a href="https://github.com/macrozheng/mall-admin-web"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE-mall--admin--web-green.svg" alt="前端项目"></a>
-</p>
+# auth-manage
 
 ## 简介
 
-mall-tiny是一款基于SpringBoot+MyBatis-Plus的快速开发脚手架，拥有完整的权限管理功能，可对接Vue前端，开箱即用。
+auth-manage是一款基于SpringBoot+MyBatis-Plus的快速开发脚手架，拥有完整的权限管理功能，可对接Vue前端，开箱即用。
 
 ## 项目演示
 
-mall-tiny项目可无缝对接`mall-admin-web`前端项目，秒变权限管理系统。前端项目地址：https://github.com/macrozheng/mall-admin-web
+auth-manage项目可无缝对接`mall-admin-web`前端项目，秒变权限管理系统。前端项目地址：https://github.com/macrozheng/mall-admin-web
 
 ![](http://img.macrozheng.com/mall/project/mall_tiny_start_09.png)
 
