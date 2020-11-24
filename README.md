@@ -6,7 +6,7 @@ auth-manage是一款基于SpringBoot+MyBatis-Plus的快速开发脚手架，拥�
 
 ## 项目演示
 
-auth-manage项目可无缝对接`mall-admin-web`前端项目，秒变权限管理系统。前端项目地址：https://github.com/macrozheng/mall-admin-web
+auth-manage项目可无缝对接`mall-admin-web`前端项目，秒变权限管理系统。前端项目地址：https://github.com/dong-jianbin/mall-admin-web
 
 ![](http://img.macrozheng.com/mall/project/mall_tiny_start_09.png)
 
