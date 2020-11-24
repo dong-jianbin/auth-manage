@@ -32,7 +32,7 @@ auth-manage项目可无缝对接`mall-admin-web`前端项目，秒变权限管�
 
 - 化繁为简，仅保留了权限管理功能相关的9张表，方便自由定制；
 
-- 数据库源文件地址：https://github.com/macrozheng/mall-tiny/blob/master/sql/mall_tiny.sql
+- 数据库源文件地址：项目中的sql目录，mall_tiny.sql
 
 ## 使用流程
 
