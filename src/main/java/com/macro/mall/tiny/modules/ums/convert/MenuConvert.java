@@ -1,17 +1,16 @@
 package com.macro.mall.tiny.modules.ums.convert;
 
-import com.macro.mall.tiny.modules.ums.dto.UmsAdminParam;
 import com.macro.mall.tiny.modules.ums.dto.UmsMenuNode;
-import com.macro.mall.tiny.modules.ums.model.UmsAdmin;
 import com.macro.mall.tiny.modules.ums.model.UmsMenu;
 import org.mapstruct.Mapper;
+import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
 /**
  * @author dongjb
  * @date 2020/11/19
  */
-@Mapper
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface MenuConvert {
     MenuConvert INSTANCE = Mappers.getMapper(MenuConvert.class);
 

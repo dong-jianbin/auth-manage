@@ -6,7 +6,7 @@
     <artifactId>auth-manage</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>auth-manage</name>
-    <description>mall-tiny project</description>
+    <description>auth-manage project</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
