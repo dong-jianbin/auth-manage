@@ -11,7 +11,9 @@ import com.baomidou.mybatisplus.generator.config.po.LikeTable;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
+//import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
+import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +39,7 @@ public class MyBatisPlusGenerator {
         autoGenerator.setCfg(initInjectionConfig(projectPath, moduleName));
         autoGenerator.setTemplate(initTemplateConfig());
         autoGenerator.setStrategy(initStrategyConfig(tableNames));
-        autoGenerator.setTemplateEngine(new VelocityTemplateEngine());
+        autoGenerator.setTemplateEngine(new FreemarkerTemplateEngine());
         autoGenerator.execute();
     }
 
@@ -62,7 +64,7 @@ public class MyBatisPlusGenerator {
     private static GlobalConfig initGlobalConfig(String projectPath) {
         GlobalConfig globalConfig = new GlobalConfig();
         globalConfig.setOutputDir(projectPath + "/src/main/java");
-        globalConfig.setAuthor("macro");
+        globalConfig.setAuthor("dongjb");
         globalConfig.setOpen(false);
         globalConfig.setSwagger2(true);
         globalConfig.setBaseResultMap(true);
@@ -109,6 +111,7 @@ public class MyBatisPlusGenerator {
         TemplateConfig templateConfig = new TemplateConfig();
         //可以对controller、service、entity模板进行配置
         //mapper.xml模板需单独配置
+//        templateConfig.setController("/templates/controller.java");
         templateConfig.setXml(null);
         return templateConfig;
     }
@@ -145,7 +148,7 @@ public class MyBatisPlusGenerator {
             }
         };
         // 模板引擎是Velocity
-        String templatePath = "/templates/mapper.xml.vm";
+        String templatePath = "/templates/mapper.xml.ftl";
         // 自定义输出配置
         List<FileOutConfig> focList = new ArrayList<>();
         // 自定义配置会被优先输出
