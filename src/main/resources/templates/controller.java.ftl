@@ -1,6 +1,6 @@
 package ${package.Controller};
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+<#--import com.baomidou.mybatisplus.extension.plugins.pagination.Page;-->
 import ${package.Entity}.${entity};
 import ${package.Service}.${table.serviceName};
 <#--import ${svoPackage}.${entity}Svo;-->
@@ -8,9 +8,19 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 <#if superControllerClassPackage??>
 import ${superControllerClassPackage};
 </#if>
+
+/**
+* <p>
+* ${table.comment!} 前端控制器
+* </p>
+*
+* @author ${author}
+* @since ${date}
+*/
 
 @Api(tags = "${table.name!}" , description = "${table.comment!}")
 @AllArgsConstructor
@@ -29,11 +39,11 @@ public class ${table.controllerName} {
 
     private final ${table.serviceName} ${serviceNameLow};
 
-<#--    @ApiOperation("获取列表")-->
-<#--    @GetMapping-->
-<#--    public Page<${entity}> selectWithPage(${entity} svo) {-->
-<#--        return ${serviceNameLow}.selectWithPage(svo);-->
-<#--    }-->
+    @ApiOperation("获取列表")
+    @GetMapping
+    public List<${entity}> listAll() {
+        return ${serviceNameLow}.list();
+    }
 
     @ApiOperation("获取单个数据")
     @GetMapping("{id}")

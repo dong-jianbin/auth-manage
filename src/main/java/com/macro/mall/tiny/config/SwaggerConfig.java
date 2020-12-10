@@ -8,7 +8,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * Swagger API文档相关配置
  *
- * @author macro
+ * @author dongjb
  * @date 2020/11/19
  */
 @Configuration
@@ -19,9 +19,9 @@ public class SwaggerConfig extends BaseSwaggerConfig {
     public SwaggerProperties swaggerProperties() {
         return SwaggerProperties.builder()
                 .apiBasePackage("com.macro.mall.tiny.modules")
-                .title("mall-tiny项目骨架")
-                .description("mall-tiny项目骨架相关接口文档")
-                .contactName("macro")
+                .title("mall项目脚手架")
+                .description("mall项目脚手架相关接口文档")
+                .contactName("dongjb")
                 .version("1.0")
                 .enableSecurity(true)
                 .build();

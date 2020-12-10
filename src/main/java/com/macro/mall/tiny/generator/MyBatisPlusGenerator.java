@@ -111,7 +111,7 @@ public class MyBatisPlusGenerator {
         TemplateConfig templateConfig = new TemplateConfig();
         //可以对controller、service、entity模板进行配置
         //mapper.xml模板需单独配置
-//        templateConfig.setController("/templates/controller.java");
+        templateConfig.setController("/templates/controller.java");
         templateConfig.setXml(null);
         return templateConfig;
     }
