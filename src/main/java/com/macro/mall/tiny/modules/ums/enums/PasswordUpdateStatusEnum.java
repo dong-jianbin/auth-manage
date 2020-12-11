@@ -1,4 +1,4 @@
-package com.macro.mall.tiny.modules.ums.constant;
+package com.macro.mall.tiny.modules.ums.enums;
 
 /**
  * 用户状态枚举值

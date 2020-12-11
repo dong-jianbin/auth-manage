@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.macro.mall.tiny.common.exception.Asserts;
 import com.macro.mall.tiny.domain.AdminUserDetails;
-import com.macro.mall.tiny.modules.ums.constant.AdminStatusEnum;
+import com.macro.mall.tiny.modules.ums.enums.AdminStatusEnum;
 import com.macro.mall.tiny.modules.ums.convert.AdminConvert;
 import com.macro.mall.tiny.modules.ums.dto.UmsAdminParam;
 import com.macro.mall.tiny.modules.ums.dto.UpdateAdminPasswordParam;

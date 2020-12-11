@@ -4,6 +4,9 @@ import com.baomidou.mybatisplus.annotation.*;
 
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
+
+import com.macro.mall.tiny.modules.pms.enums.ShowStatusEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -38,7 +41,7 @@ public class PmsBrand implements Serializable {
     @ApiModelProperty(value = "是否为品牌制造商：0->不是；1->是")
     private Integer factoryStatus;
 
-    private Integer showStatus;
+    private ShowStatusEnum showStatus;
 
     @ApiModelProperty(value = "产品数量")
     private Integer productCount;
@@ -62,13 +65,13 @@ public class PmsBrand implements Serializable {
     private String createBy;
 
     @TableField(fill = FieldFill.INSERT, updateStrategy = FieldStrategy.NEVER)
-    private LocalDateTime createTime;
+    private Date createTime;
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private String updateBy;
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime updateTime;
+    private Date updateTime;
 
 
 }

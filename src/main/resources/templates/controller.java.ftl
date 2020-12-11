@@ -25,7 +25,7 @@ import ${superControllerClassPackage};
 @Api(tags = "${table.name!}" , description = "${table.comment!}")
 @AllArgsConstructor
 @RestController
-@RequestMapping("${table.name}")
+@RequestMapping("/${table.name}")
 <#if kotlin>
     class ${table.controllerName}<#if superControllerClass??> : ${superControllerClass}()</#if>
 <#else>
@@ -40,31 +40,32 @@ public class ${table.controllerName} {
     private final ${table.serviceName} ${serviceNameLow};
 
     @ApiOperation("获取列表")
-    @GetMapping
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @ResponseBody
     public List<${entity}> listAll() {
         return ${serviceNameLow}.list();
     }
 
     @ApiOperation("获取单个数据")
-    @GetMapping("{id}")
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ${entity} selectById(@PathVariable Integer id) {
         return ${serviceNameLow}.getById(id);
     }
 
     @ApiOperation("创建")
-    @PostMapping
+    @RequestMapping(value = "/insert/{id}", method = RequestMethod.POST)
     public void insert(@RequestBody ${entity} ${entityLow}) {
         ${serviceNameLow}.save(${entityLow});
     }
 
     @ApiOperation("编辑")
-    @PutMapping
+    @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     public void updateById(@RequestBody ${entity} ${entityLow}) {
         ${serviceNameLow}.updateById(${entityLow});
     }
 
     @ApiOperation("删除")
-    @DeleteMapping("{id}")
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     public void deleteById(@PathVariable Integer id) {
         ${serviceNameLow}.removeById(id);
     }

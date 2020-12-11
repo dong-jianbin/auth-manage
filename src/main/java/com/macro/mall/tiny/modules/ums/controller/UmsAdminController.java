@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static com.macro.mall.tiny.modules.ums.constant.PasswordUpdateStatusEnum.*;
+import static com.macro.mall.tiny.modules.ums.enums.PasswordUpdateStatusEnum.*;
 
 /**
  * 后台用户管理

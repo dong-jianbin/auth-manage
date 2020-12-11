@@ -1,6 +1,4 @@
-package com.macro.mall.tiny.modules.ums.constant;
-
-import com.macro.mall.tiny.common.api.IErrorCode;
+package com.macro.mall.tiny.modules.ums.enums;
 
 /**
  * 用户状态枚举值

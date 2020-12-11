@@ -18,6 +18,8 @@ mybatis-plus:
   configuration:
     auto-mapping-behavior: partial
     map-underscore-to-camel-case: true
+  # 支持统配符 * 或者 ; 分割
+  typeEnumsPackage: com.macro.mall.tiny.modules.*.enums
 
 jwt:
   tokenHeader: Authorization #JWT存储的请求头

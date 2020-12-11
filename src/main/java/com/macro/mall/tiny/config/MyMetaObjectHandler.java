@@ -12,6 +12,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * 填充器
@@ -35,9 +36,9 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         try {
             String username = getUserName();
             this.setFieldValByName("createBy", username, metaObject);
-            this.setFieldValByName("createTime", LocalDateTime.now(), metaObject);
+            this.setFieldValByName("createTime", new Date(), metaObject);
             this.setFieldValByName("updateBy", username, metaObject);
-            this.setFieldValByName("updateTime", LocalDateTime.now(), metaObject);
+            this.setFieldValByName("updateTime", new Date(), metaObject);
         } catch (Exception e) {
             log.error(e.getMessage());
         }
@@ -49,7 +50,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         try {
             String username = getUserName();
             this.setFieldValByName("updateBy", username, metaObject);
-            this.setFieldValByName("updateTime", LocalDateTime.now(), metaObject);
+            this.setFieldValByName("updateTime", new Date(), metaObject);
         } catch (Exception e) {
             log.error(e.getMessage());
         }
